@@ -1,0 +1,42 @@
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+.paragraph {
+  color: $color-gray;
+}
+
+%heading {
+  color: $color-very-dark-violet;
+  line-height: 1.1;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 6rem;
+
+  @include respond("mobile") {
+    font-size: 4.4rem;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 3rem;
+}
+
+.heading-3--light {
+  color: #fff;
+}
+
+.heading-4 {
+  @extend %heading;
+}
+
+.heading-4--light {
+  color: #fff;
+  margin-bottom: 2.6rem;
+}

@@ -1,0 +1,39 @@
+.flex-container {
+  display: flex;
+  align-items: center;
+
+  @include respond("mobile") {
+    flex-direction: column-reverse;
+  }
+  .more {
+    flex: 0 0 50%;
+    align-self: center;
+    margin-top: -5rem;
+    margin-right: 6rem;
+
+    @include respond("mobile") {
+      margin-right: 0;
+      margin-top: 0;
+      flex-basis: 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    & > .paragraph {
+      font-size: 2rem;
+    }
+  }
+
+  .working {
+    @include respond("mobile") {
+      margin-left: auto;
+    }
+    &__img {
+      height: 100%;
+
+      @include respond("mobile") {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}

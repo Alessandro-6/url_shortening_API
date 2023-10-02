@@ -1,0 +1,32 @@
+$color-primary-cyan: hsl(180, 66%, 49%);
+$color-primary-dark-violet: hsl(257, 27%, 26%);
+$color-light-cyan: hsl(180, 77%, 79%);
+
+$color-secondary-red: hsl(0, 87%, 67%);
+$color-light-gray: hsl(225, 33%, 95%);
+$color-gray: hsl(0, 0%, 75%);
+$color-grayish-violet: hsl(257, 7%, 63%);
+$color-very-dark-blue: hsl(255, 11%, 22%);
+$color-very-dark-violet: hsl(260, 8%, 14%);
+
+@mixin respond($width) {
+  @if $width == "mobile" {
+    @media screen and (max-width: 500px) {
+      @content;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}

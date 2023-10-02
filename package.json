@@ -1,0 +1,24 @@
+{
+  "name": "Url_shortening_app",
+  "version": "1.0.0",
+  "description": "Tip calculator app",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Jonas",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "",
+    "concat": "",
+    "node-sass": "",
+    "npm-run-all": "",
+    "postcss-cli": ""
+  }
+}

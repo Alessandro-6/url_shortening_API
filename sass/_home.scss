@@ -1,0 +1,67 @@
+.header {
+  width: 70vw;
+  margin: 0 auto;
+
+  @include respond("mobile") {
+    width: 90vw;
+  }
+}
+
+.section-more {
+  width: 70vw;
+  margin: 0 auto;
+
+  @include respond("mobile") {
+    width: 90vw;
+  }
+}
+
+.section-features {
+  padding: 16rem 0;
+  padding-bottom: 10rem;
+  background-color: $color-light-gray;
+}
+
+.section-boost {
+  padding: 6rem;
+  background-color: $color-primary-dark-violet;
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+
+  @include respond("mobile") {
+    background-image: url(../images/bg-boost-mobile.svg);
+    padding: 10rem 2rem;
+  }
+}
+
+.footer {
+  padding: 7rem;
+  background-color: $color-very-dark-violet;
+
+  @include respond("mobile") {
+    padding: 7rem 0;
+  }
+
+  &-container {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    & > *:not(:last-child) {
+      @include respond("mobile") {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include respond("mobile") {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
